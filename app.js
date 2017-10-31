@@ -48,3 +48,7 @@ bot.dialog('/',function(session){
     });
   }).end(JSON.stringify(jsonQ));
 });
+bot.on('conversationUpdate', function (message) {
+    console.log(message);
+    var event = teams.TeamsMessage.getConversationUpdateData(message);
+});
